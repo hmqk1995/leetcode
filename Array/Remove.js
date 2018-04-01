@@ -32,6 +32,6 @@ var removeDuplicates = function(nums) {
 };
 
 /*
-Node:
+Note:
 Looping an array from the length down (i--) can avoid the problem of missing index when deleting an element while looping.
 */
