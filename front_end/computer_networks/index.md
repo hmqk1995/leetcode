@@ -84,3 +84,17 @@ Why: HTTP协议是”无状态”的协议, 它不能保存客户的信息。这
 1. url重写 （将会话id通过url信息传递）
 2. 隐藏表单域
 3. cookie, localstorage
+
+__跨站攻击（CSRF Cross-site request forgery 跨站请求伪造）__
+
+防范：
+
+1. 不要使用GET请求向服务器增加/修改数据
+2. 检测点击链接之前的url(作为Referer信息保存在请求头部中)
+3. Token（攻击者无法预测每一次请求随机添加的token，要注意token的保密性，敏感操作用POST）
+
+__XSS （Cross Site Scripting，跨站脚本攻击）__
+
+通过一些正常的站内交互途径，例如发布评论，提交含有 JavaScript 的内容文本。
+
+防范：将用户的输入使用 HTML 解析库进行解析，获取其中的数据。然后根据用户原有的标签属性，重新构建 HTML 元素树。构建的过程中，所有的标签、属性都只从白名单中拿取。
