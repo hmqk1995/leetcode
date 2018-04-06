@@ -22,9 +22,9 @@
 
     标准限制每个域名下cookie数量最多为20个，但浏览器具体实现会大于20个。
 
-    cookie添加到http请求头部是浏览器行为。存储在cookie中的数据每次都会被放在http请求中。最适合做身份验证。
+    cookie添加到http请求头部是浏览器行为。存储在cookie中的数据每次都会被放在http请求中。最适合做身份验证。
 
-    访问cookie： 浏览器提供cookie属性给javascript，可以通过document.cookie来访问。（只能访问到非HttpOnly的数据，HttpOnly属性由服务端设置）
+    访问cookie： 浏览器提供cookie属性给javascript，可以通过document.cookie来访问。（只能访问到非HttpOnly的数据，HttpOnly属性由服务端设置）
 
     服务端通过响应response头部的set-cookie字段来设置cookie（每个字段只能设置一个cookie, 服务端可以设置cookie 的所有选项：expires、domain、path、secure、HttpOnly）
 
